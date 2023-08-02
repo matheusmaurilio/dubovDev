@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=PT+Serif&display=swap"rel="stylesheet">
+
+    <link rel="stylesheet" href="/tutoriais/tutoriais-TS/post2/post2.css" />
+
+    <title>DUBOV DEV</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="div1">
+        <a href="/home.html"
+          ><img src="/src/images/dubov.png" alt="Logo Dubov" />
+          <p class="titledubov">DUBOV DEV</p>
+        </a>
+      </div>
+      <ul>
+        <li>
+          <a href="/home.html">Home</a>
+        </li>
+        <li>
+          <a href="/tutoriais/tutoriais.html">Tutoriais</a>
+        </li>
+        <li>
+          <a href="">Sobre</a>
+        </li>
+        <li>
+          <a href="">Contato</a>
+        </li>
+        <li>
+          <a href="">
+            <img
+              src="/src/icons/search.svg"
+              id="searchicon"
+              alt="searchicon"
+              class="icons"
+            />
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="container-2" >
+          <ul id="menulateral">
+            <li>
+              <a href="/tutoriais/tutoriais-TS/tutoriais-TS.html">Início</a>
+            </li>
+            <br />
+            <li>
+              <a href="/tutoriais/tutoriais-TS/post1/post1.html">Iniciando com TypeScript</a>
+            </li>
+            <br />
+            <li>
+              <a href="/tutoriais/tutoriais-TS/post2/post2.html"
+                >Como transpilar TS para JS</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="container-2" id="cont">
+
+          <div class="autoral">
+            <img src="/src/images/eu.jpg" alt="iconeautor" id="iconeautor">
+            <div class="autoral2">
+              <p id="nomeautor">Matheus Maurilio</p>
+              <p id="datapost">21/07/2023</p>
+            </div>
+          </div>
+
+
+          <h1 id="tutorialtext">Transpilando um arquivo TypeScript em JavaScript</h1>
+            <br><br>
+          <p class="textobase">
+            Neste tutorial, vamos aprender como transpilar (converter) um arquivo TypeScript (TS) em JavaScript (JS).
+            TypeScript é um superset de JavaScript que adiciona tipagem estática e recursos avançados à linguagem,
+            e a transpilação é o processo de converter código TypeScript em JavaScript para que ele possa ser 
+            executado em qualquer ambiente que suporte JS.
+          </p>
+          <br><br>
+          <h2>Passo 1: Instalação do Node.js</h2>
+          <br><br>
+          <p class="textobase">O Node.js é uma plataforma que permite executar código JavaScript fora do navegador, 
+            e é necessário para executar arquivos JavaScript em um ambiente de linha de comando. 
+            Se você ainda não possui o Node.js instalado, siga as instruções para a instalação 
+            adequada do Node.js no seu sistema operacional.
+            <br><br>
+            Você pode fazer o download do Node.js no site oficial: 
+            <a target="_blank" href="https://nodejs.org/en" style="font-weight: bold; color: black;">https://nodejs.org</a>
+            <br><br>
+            Após concluir a instalação do Node.js, verifique se o Node.js e o npm (Node Package Manager)
+            estão corretamente instalados executando os seguintes comandos no terminal ou prompt de comando:</p>
+
+          <div > 
+            <pre><code >node -v</code></pre>
+            <pre><code >npm -v</code></pre>
+                
+          </div>
+
+          <h2>Passo 2: Instalação do TypeScript</h2>
+          <br><br>
+          <p class="textobase">Antes de começarmos, é necessário ter o TypeScript instalado em nosso ambiente.
+            Se você ainda não possui o TypeScript instalado, pode fazê-lo através do gerenciador
+            de pacotes npm (Node Package Manager).
+            <br><br>
+            Abra o terminal ou prompt de comando e digite o seguinte comando para instalar o TypeScript globalmente:</p>
+
+          <div > 
+            <pre><code >npm install -g typescript</code></pre>
+          </div>
+
+          <h2>Passo 3: Criando o arquivo TypeScript</h2>
+          <br><br>
+          <p class="textobase">Agora, vamos criar um arquivo TypeScript. 
+          <br><br>
+          Crie um arquivo chamado app.ts em qualquer diretório de sua preferência.</p>
+
+          <div > 
+            <pre><code>function greet(name) {
+    return `Olá, ${name}!`;
+     }
+ const message = greet("João");
+ console.log(message);</code></pre>
+            
+            <p class="textobase">Note que o parâmetro "name" não possui tipagem estabelecida, logo, é atribuido por default o tipo: any</p>
+          </div>
+          <br><br>
+
+          <h2>Passo 4: Transpilando o arquivo</h2>
+          <br><br>
+          <p class="textobase">
+            Após criar o arquivo TypeScript, estamos prontos para transpilá-lo para JavaScript. 
+            No terminal, navegue até o diretório onde você salvou o arquivo app.ts e digite o 
+            seguinte comando:
+          </p>
+          <pre><code>tsc app.ts</code></pre>
+
+          <p class="textobase">O comando tsc é o compilador TypeScript,
+           e ele irá transpilar o arquivo app.ts para JavaScript, gerando um arquivo chamado app.js.</p>
+          
+          <br>
+          <h2>Passo 5: Verificando o resultado</h2>
+          <br><br>
+          <p class="textobase">
+            Após a transpilação ser concluída, você encontrará o arquivo JavaScript resultante (app.js) no mesmo diretório em que o arquivo TypeScript estava.
+            <br><br>
+            Agora, você pode executar o arquivo JavaScript normalmente como faria com qualquer outro código JS:
+          </p>
+          <pre><code>node app.js</code></pre>
+          <p class="textobase">
+            E pronto! Agora você tem um arquivo TypeScript convertido para JavaScript e está pronto para ser executado
+            em qualquer ambiente JavaScript. Lembre-se de que, durante a transpilação, as anotações de tipo presentes
+            no código TypeScript são removidas, pois JavaScript não possui o conceito de tipagem estática do TypeScript.
+          </p>
+            <br><br><br><br><br>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/matheusmaurilio">
+              <img src="/src/icons/github.svg" alt="githubicon" class="icons" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:mathmaurilio@gmail.com ">
+              <img
+                src="/src/icons/envelope-solid.svg"
+                alt="emailicon"
+                class="icons"
+              />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://wa.me/31971968801">
+              <img src="/src/icons/whatsapp.svg" alt="wppicon" class="icons" />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/matheus-maurilio-46903b258/"
+            >
+              <img src="/src/icons/linkedin.svg" alt="linkedinicon" class="icons" />
+            </a>
+          </li>
+        </ul>
+        <div>&copy; Matheus Maurilio; Todos os direitos reservados.</div>
+      </footer>
+  </body>
+  
+
+  <script src="/tutoriais/tutoriais-TS/post2/post2.js"></script>
+</html>

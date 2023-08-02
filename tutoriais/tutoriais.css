@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* color: snow; */
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    box-shadow: 1px 1px 10px 2px #ddd;
+    margin-bottom: 50px;
+    background-color: #fff;
+
+}
+
+header ul{
+    display: flex;
+    align-items: end;
+    font-size: 18px;
+    margin-right: 4rem;
+}
+
+header ul li {
+    padding: 12px;
+    color: #000;
+}
+
+header ul li a{
+    color: #000;
+    font-size: 1.3rem;
+    font-family: 'Expletus Sans', cursive;
+}
+
+header ul li a:hover{
+    color: #237A57;
+    transition: 300ms;
+    
+}
+
+#searchicon{
+    width: 24px;
+    height: 24px;
+    transition: 300ms;
+}
+
+#div1 a{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.titledubov{
+    font-family: 'Expletus Sans', cursive;
+    color: #000;
+    font-size: 3rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.icons{
+    width: 36px;
+    height: 36px;
+    transition: 300ms;
+    
+  }
+  
+.icons:hover {
+    opacity: 0.7;
+}
+
+/* CONTAINER TUTORIAIS*/
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-gap: 20px;
+  }
+  
+.grid-item {
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+#sqlpar{
+    margin-top: 2rem;
+}
+
+.nomeicon{
+    margin-top: 1rem;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Expletus Sans', cursive;
+}
+  
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background: linear-gradient(180deg, #167e69, #0d5739);
+    box-shadow: 1px 1px 18px 1px #000;
+    background-color: #fff;
+    color: #ffffff88;
+    font-size: 12px;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li{
+    padding: 20px;
+}
